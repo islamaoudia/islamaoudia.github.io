@@ -1,0 +1,97 @@
+<style>
+  #lang-switcher {
+    position: fixed;
+    top: 12px;
+    right: 16px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: rgba(30, 30, 30, 0.85);
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    padding: 2px 4px;
+    backdrop-filter: blur(4px);
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  #lang-switcher button {
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    line-height: 1.2;
+  }
+  #lang-switcher button.active {
+    background: #3a3a3a;
+    color: #fff;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const dict = {
+    fr: {
+      'HOME': 'ACCUEIL',
+      'CATEGORIES': 'CATÉGORIES',
+      'TAGS': 'TAGS',
+      'ARCHIVES': 'ARCHIVES',
+      'ABOUT': 'À PROPOS',
+      'PROJECTS': 'PROJETS',
+      'About': 'À propos',
+      'Projects': 'Projets',
+      'Categories': 'Catégories',
+      'Archives': 'Archives',
+      'Recently Updated': 'Mis à jour récemment',
+      'Trending Tags': 'Tags populaires',
+      'Cybersecurity Student • Pwn CTF Player': 'Étudiant en Cybersécurité • Joueur CTF Pwn'
+    }
+  };
+
+  // Inject compact switcher
+  const switcher = document.createElement('div');
+  switcher.id = 'lang-switcher';
+  switcher.innerHTML = '<button id="sw-en">EN</button><button id="sw-fr">FR</button>';
+  document.body.appendChild(switcher);
+
+  // Store original English UI text once
+  const uiNodes = [
+    ...document.querySelectorAll('#sidebar ul.nav li a span'),
+    ...document.querySelectorAll('p.site-subtitle'),
+    ...document.querySelectorAll('h1.dynamic-title'),
+    ...document.querySelectorAll('#panel-wrapper h2.panel-heading')
+  ];
+  uiNodes.forEach(el => {
+    if (!el.dataset.orig) el.dataset.orig = el.textContent.trim();
+  });
+
+  function applyLang(lang) {
+    localStorage.setItem('site-lang', lang);
+
+    // Toggle active button
+    document.getElementById('sw-en').classList.toggle('active', lang === 'en');
+    document.getElementById('sw-fr').classList.toggle('active', lang === 'fr');
+
+    // Toggle content blocks
+    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+    document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? '' : 'none');
+
+    // Translate UI labels
+    uiNodes.forEach(el => {
+      const orig = el.dataset.orig;
+      el.textContent = (lang === 'fr' && dict.fr[orig]) ? dict.fr[orig] : orig;
+    });
+
+    // Translate search placeholder
+    const search = document.getElementById('search-input');
+    if (search) search.placeholder = lang === 'fr' ? 'Rechercher...' : 'Search...';
+  }
+
+  document.getElementById('sw-en').addEventListener('click', () => applyLang('en'));
+  document.getElementById('sw-fr').addEventListener('click', () => applyLang('fr'));
+
+  applyLang(localStorage.getItem('site-lang') || 'en');
+});
+</script>

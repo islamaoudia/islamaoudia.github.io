@@ -3,12 +3,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-<div style="display: flex; gap: 8px; margin-bottom: 1.5rem;">
-  <button id="btn-en" onclick="setLang('en')" style="padding: 4px 12px; border-radius: 6px; border: 1px solid #444; background: #2d2d2d; color: #fff; cursor: pointer; font-weight: 600;">EN</button>
-  <button id="btn-fr" onclick="setLang('fr')" style="padding: 4px 12px; border-radius: 6px; border: 1px solid #444; background: transparent; color: #aaa; cursor: pointer; font-weight: 600;">FR</button>
-</div>
-
-<div id="lang-en" markdown="1">
+<div class="lang-en" markdown="1">
 
 # Hey, I'm Islam (:
 
@@ -40,7 +35,7 @@ I love digging into low-level stuff mostly binary exploitation and reverse engin
 
 </div>
 
-<div id="lang-fr" style="display: none;" markdown="1">
+<div class="lang-fr" style="display: none;" markdown="1">
 
 # Salut, moi c'est Islam (:
 
@@ -71,14 +66,3 @@ J'adore creuser dans le bas niveau — surtout l'exploitation binaire et la rét
 - **Medium :** <a href="https://medium.com/@isl.aoudia" target="_blank" rel="noopener noreferrer">medium.com/@isl.aoudia</a>
 
 </div>
-
-<script>
-function setLang(lang) {
-  document.getElementById('lang-en').style.display = lang === 'en' ? 'block' : 'none';
-  document.getElementById('lang-fr').style.display = lang === 'fr' ? 'block' : 'none';
-  document.getElementById('btn-en').style.background = lang === 'en' ? '#2d2d2d' : 'transparent';
-  document.getElementById('btn-en').style.color = lang === 'en' ? '#fff' : '#aaa';
-  document.getElementById('btn-fr').style.background = lang === 'fr' ? '#2d2d2d' : 'transparent';
-  document.getElementById('btn-fr').style.color = lang === 'fr' ? '#fff' : '#aaa';
-}
-</script>
