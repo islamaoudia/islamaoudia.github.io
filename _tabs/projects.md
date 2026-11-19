@@ -3,14 +3,14 @@ icon: fas fa-code
 order: 5
 ---
 
-## [OctoScan](https://github.com/islamnyx/OctoScan)
+## OctoScan
 Open-source security scanner extended with an agentic AI security analyst loop.
 - **Achievement:** 3rd place (Agent Loop Builder) at the GOMYCODE x NVIDIA Hackathon.
-- **Repo:** [github.com/islamnyx/OctoScan](https://github.com/islamnyx/OctoScan)
+- **Repository:** <a href="https://github.com/islamnyx/OctoScan" target="_blank" rel="noopener noreferrer">github.com/islamnyx/OctoScan</a>
 
 ---
 
-## [Complex Shield](https://github.com/islamaoudia/Anti-DOS)
+## Complex Shield
 Anti-DoS protection layer built with a reverse proxy, token bucket rate limiting, and Redis.
 - **Achievement:** 1st place with **C0mp13x_7he0r3m** at CICONIX CTF & Hackathon.
-- **Repo:** [github.com/islamaoudia/Anti-DOS](https://github.com/islamaoudia/Anti-DOS)
+- **Repository:** <a href="https://github.com/islamaoudia/Anti-DOS" target="_blank" rel="noopener noreferrer">github.com/islamaoudia/Anti-DOS</a>
