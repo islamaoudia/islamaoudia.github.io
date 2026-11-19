@@ -19,7 +19,7 @@ Anti-DoS protection layer built with a reverse proxy, token bucket rate limiting
 
 </div>
 
-<div class="lang-fr" style="display: none;" markdown="1">
+<div class="lang-fr" markdown="1">
 
 ## OctoScan
 Scanner de sécurité open-source étendu avec une boucle d'agent IA analyste sécurité.

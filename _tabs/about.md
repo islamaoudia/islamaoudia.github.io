@@ -35,7 +35,7 @@ I love digging into low-level stuff mostly binary exploitation and reverse engin
 
 </div>
 
-<div class="lang-fr" style="display: none;" markdown="1">
+<div class="lang-fr" markdown="1">
 
 # Salut, moi c'est Islam (:
 
