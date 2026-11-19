@@ -20,8 +20,8 @@ I love digging into low-level stuff mostly binary exploitation and reverse engin
 ---
 
 ## Projects
-- **OctoScan** — Open-source security scanner extended with an agentic AI security analyst loop (3rd place at GOMYCODE x NVIDIA Hackathon).
-- **Complex Shield** — Anti-DoS protection layer using a reverse proxy, token bucket rate limiting, and Redis (1st place at CICONIX CTF & Hackathon).
+- **[OctoScan](https://github.com/islamnyx/OctoScan)** — Open-source security scanner extended with an agentic AI security analyst loop (3rd place at GOMYCODE x NVIDIA Hackathon).
+- **[Complex Shield](https://github.com/islamaoudia/Anti-DOS)** — Anti-DoS protection layer using a reverse proxy, token bucket rate limiting, and Redis (1st place at CICONIX CTF & Hackathon).
 
 ---
 
