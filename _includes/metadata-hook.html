@@ -3,12 +3,10 @@
   html[data-lang="fr"] .lang-en { display: none !important; }
 
   #lang-switcher {
-    position: fixed;
-    top: 3.5rem;
-    right: 1rem;
-    z-index: 9999;
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
+    margin-left: 0.5rem;
     gap: 2px;
     background: rgba(30, 30, 30, 0.9);
     border: 1px solid #444;
@@ -64,7 +62,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var switcher = document.createElement('div');
   switcher.id = 'lang-switcher';
   switcher.innerHTML = '<button id="sw-en">EN</button><button id="sw-fr">FR</button>';
-  document.body.appendChild(switcher);
+
+  var searchEl = document.getElementById('search');
+  if (searchEl && searchEl.parentNode) {
+    searchEl.insertAdjacentElement('afterend', switcher);
+  } else {
+    document.body.appendChild(switcher);
+  }
 
   var uiNodes = [].concat(
     Array.from(document.querySelectorAll('#sidebar ul.nav li a span')),
