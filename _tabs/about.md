@@ -3,6 +3,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
+> 🇫🇷 **[Lire en français](/fr/)**
+
 # Hey, I'm Islam (:
 
 I'm a 2nd-year cybersecurity student at **ENSCS** (Algiers) and a **Pwn CTF player**.  
