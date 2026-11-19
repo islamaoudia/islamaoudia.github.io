@@ -9,7 +9,7 @@ I'm a 2nd-year cybersecurity student at **ENSCS** (Algiers) and a **Pwn CTF play
 I love digging into low-level stuff mostly binary exploitation and reverse engineering. I'm always trying to learn more, break things, and figure out how they actually work under the hood. I also really enjoy explaining tough concepts simply and sharing what I learn along the way.
 
 - **CTF Team:** Pwn & Rev player for **C0mp13x_7he0r3m**
-- **Club:** Technical Department @ **Shellmates**
+- **Clubs:** Technical Department @ **Shellmates** | Cybersecurity Department @ **CIC**
 
 ---
 
